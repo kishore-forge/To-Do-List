@@ -82,8 +82,7 @@ You only need:
 Clone the repository:
 
 ```bash
-git clon
-e YOUR_REPOSITORY_URL
+git clone https://github.com/kishore-forge/To-Do-List.git
 ```
 
 Navigate to the project folder:
