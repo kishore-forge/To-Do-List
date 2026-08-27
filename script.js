@@ -6,7 +6,7 @@ const filterButtons = document.querySelectorAll(".buttons button");
 
 let tasks = [];
 
-// Add Task
+
 function add(event) {
     event.preventDefault();
 
@@ -31,10 +31,10 @@ function add(event) {
 }
 
 
-// Display Tasks
+
 function displayTasks(filter = "All") {
 
-    // Remove old task frames
+   
     const oldTasks = document.querySelectorAll(".task-item");
 
     oldTasks.forEach(task => task.remove());
@@ -51,7 +51,7 @@ function displayTasks(filter = "All") {
         }
 
 
-        // Main task frame
+       
         const taskFrame = document.createElement("div");
 
         taskFrame.className = "task-item";
@@ -67,7 +67,7 @@ function displayTasks(filter = "All") {
         taskFrame.style.padding = "10px";
 
 
-        // Checkbox
+       
         const checkbox = document.createElement("input");
 
         checkbox.type = "checkbox";
@@ -77,7 +77,7 @@ function displayTasks(filter = "All") {
         checkbox.style.height = "20px";
 
 
-        // Task text
+        
         const taskText = document.createElement("div");
 
         taskText.textContent = task.text;
@@ -86,14 +86,14 @@ function displayTasks(filter = "All") {
         taskText.style.fontSize = "16px";
 
 
-        // Strike-through when completed
+        
         if (task.completed) {
             taskText.style.textDecoration = "line-through";
             taskText.style.color = "gray";
         }
 
 
-        // Status
+       
         const status = document.createElement("p");
 
         status.textContent = task.completed
@@ -108,7 +108,7 @@ function displayTasks(filter = "All") {
             : "orange";
 
 
-        // Delete button
+        
         const deleteButton = document.createElement("button");
 
         deleteButton.textContent = "🗑️";
@@ -121,7 +121,7 @@ function displayTasks(filter = "All") {
         deleteButton.style.border = "none";
 
 
-        // Checkbox click
+        
         checkbox.addEventListener("change", function () {
 
             task.completed = checkbox.checked;
@@ -131,7 +131,7 @@ function displayTasks(filter = "All") {
         });
 
 
-        // Delete click
+        
         deleteButton.addEventListener("click", function () {
 
             tasks = tasks.filter(t => t.id !== task.id);
@@ -141,7 +141,7 @@ function displayTasks(filter = "All") {
         });
 
 
-        // Add everything to frame
+       
         taskFrame.appendChild(checkbox);
         taskFrame.appendChild(taskText);
         taskFrame.appendChild(status);
@@ -156,7 +156,7 @@ function displayTasks(filter = "All") {
 }
 
 
-// Get current filter
+
 function getCurrentFilter() {
 
     const activeButton = document.querySelector(".buttons button.active");
@@ -169,32 +169,32 @@ function getCurrentFilter() {
 }
 
 
-// Filter buttons
+
 
 filterButtons.forEach(button => {
 
-    // Clear Completed button-a filter-la include panna koodadhu
+    
     if (button.id === "clear") {
         return;
     }
 
     button.addEventListener("click", function () {
 
-        // Ella filter buttons-layum active remove pannum
+        
         filterButtons.forEach(btn => {
             btn.classList.remove("active");
         });
 
-        // Click panna button-ku active add pannum
+       
         button.classList.add("active");
 
-        // Selected filter-ku tasks display pannum
+        
         displayTasks(button.textContent);
     });
 });
 
 
-// Clear completed tasks
+
 clearButton.addEventListener("click", function () {
 
     tasks = tasks.filter(task => !task.completed);
@@ -204,7 +204,7 @@ clearButton.addEventListener("click", function () {
 });
 
 
-// Update footer pending count
+
 function updatePendingCount() {
 
     const pendingCount = tasks.filter(
@@ -219,7 +219,7 @@ function updatePendingCount() {
 }
 
 
-// Press Enter to add task
+
 input.addEventListener("keydown", function (event) {
 
     if (event.key === "Enter") {
@@ -231,9 +231,9 @@ input.addEventListener("keydown", function (event) {
 });
 
 
-// Default filter
+
 document.querySelector(".buttons button").classList.add("active");
 
 
-// Initial display
+
 displayTasks("All");
