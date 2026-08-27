@@ -151,3 +151,7 @@ button {
     box-shadow: none;
     background: transparent;
 }
+.buttons button.active {
+    background-color: rgb(144, 25, 192);
+    color: white;
+}

@@ -170,26 +170,27 @@ function getCurrentFilter() {
 
 
 // Filter buttons
+
 filterButtons.forEach(button => {
 
-    // Ignore Clear Completed button
+    // Clear Completed button-a filter-la include panna koodadhu
     if (button.id === "clear") {
         return;
     }
 
-
     button.addEventListener("click", function () {
 
+        // Ella filter buttons-layum active remove pannum
         filterButtons.forEach(btn => {
             btn.classList.remove("active");
         });
 
+        // Click panna button-ku active add pannum
         button.classList.add("active");
 
+        // Selected filter-ku tasks display pannum
         displayTasks(button.textContent);
-
     });
-
 });
 
 
