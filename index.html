@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images.png"
+    <title>To-Do</title>
+  </head>
+  <body>
+    <div class="header">
+      <center>
+        <h1>To-Do List</h1>
+        <h4>Plan your day, Get things done.</h4>
+        <p id="bar"></p>
+        <input id="input" autofocus placeholder="   Add a new task..." />
+        <button onclick="add(event)">Add</button>
+      </center>
+    </div>
+
+    <div class="body">
+      <div class="buttons" style="margin-left: 30px; display: flex">
+        <button>All</button>
+        <button>Pending</button>
+        <button>Completed</button>
+        <button id="clear">Clear Completed 🗑️</button>
+      </div>
+      <div class="task" id="tasklist" style="position: relative"></div>
+    </div>
+    <div class="footer">
+      <span>|||</span>
+      <p>You have <strong>0</strong> tasks pending</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

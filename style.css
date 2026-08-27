@@ -1,0 +1,153 @@
+body {
+    background: linear-gradient(to right, #2c0946, #1f97cf);
+}
+
+.header {
+    background-color: rgb(2, 2, 60);
+    width: 800px;
+    display: center;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-left: 250px;
+}
+
+#bar {
+    width: 70px;
+    height: 5px;
+    background-color: rgb(144, 25, 192);
+    border-radius: 5px;
+}
+
+.header input {
+    width: 80%;
+    border-radius: 5px;
+    padding: 7px;
+
+}
+
+.header button {
+    width: 15%;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: rgb(144, 25, 192);
+    color: white;
+}
+
+.body {
+    background-color: white;
+    width: 800px;
+    min-height: 600px;
+    max-height: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 250px;
+    margin-bottom: 0;
+}
+
+.buttons button {
+    background-color: transparent;
+    color: black;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    padding: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 8px;
+}
+
+.task {
+    background-color: white;
+    width: 800px;
+}
+
+.task #tasksframe {
+    width: 90%;
+    margin: 20px;
+    border-radius: 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.task input[type="checkbox"] {
+    border: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#tasksframe p {
+    position: absolute;
+    left: 80%;
+    color: orange;
+    background: transparent;
+
+}
+
+.status {
+    position: absolute;
+    left: 90%;
+    background-color: transparent;
+    padding: 2px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.footer {
+    background-color: lightgrey;
+    position: relative;
+    left: 250px;
+    width: 860px;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+}
+
+.footer span {
+    background-color: rgb(144, 25, 192);
+    width: fit-content;
+    height: fit-content;
+    gap: 0;
+    position: relative;
+    left: 40px;
+    top: 18px;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    left: 45px;
+}
+
+button {
+    cursor: pointer;
+    ;
+}
+
+#clear {
+    position: relative;
+    left: 40%;
+    color: red;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
