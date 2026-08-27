@@ -11,11 +11,11 @@ This project helps users organize their daily tasks, track completed work, and m
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:** Add your GitHub Pages link here
+🔗 **Live Demo:** https://kishore-forge.github.io/To-Do-List/
 
 ## 📸 Preview
 
-> Add a screenshot of your To-Do List application here.
+![To-Do List Preview](demo.png)
 
 ## ✨ Features
 
